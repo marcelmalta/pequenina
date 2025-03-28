@@ -1,0 +1,14 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.logo, .propaganda {
+    max-width: 100%;
+    height: auto;
+}

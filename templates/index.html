@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frase do Dia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/apequenina.jpeg') }}" alt="Logo da Loja" class="logo">
+        <h1>Frase do Dia</h1>
+        <p>Olá, {{ user_email }}!</p>
+        <img src="{{ url_for('static', filename='images/planos.png') }}" alt="Propaganda" class="propaganda">
+        <p>{{ frase }}</p>
+        <img src="/imagem" alt="Frase em imagem">
+        <br>
+        <a href="/">Gerar outra frase</a>
+        {% if user_type == "client" %}
+            <a href="/agendamento" class="action-button">Agendar Horário</a>
+        {% endif %}
+        {% if user_type == "admin" %}
+            <a href="/admin" class="admin-button">Painel de Administração</a>
+        {% endif %}
+        <a href="/logout">Sair</a>
+    </div>
+</body>
+</html>
